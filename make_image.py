@@ -42,17 +42,17 @@ def font(path, size):
 
 CARDS = [
     (1, (20, 102, 107), "TÜRKIYE · CLIMATE",
-     "COP31 runs into a second day of overtime",
-     "New draft deal in Antalya still omits fossil fuels by name; "
-     "nearly 200 nations seek consensus.", "leaf"),
+     "COP31 puts its final deal to the vote",
+     "After two days of overtime, the Antalya text never names "
+     "fossil fuels; nearly 200 nations must agree it.", "leaf"),
     (2, (176, 48, 38), "MIDDLE EAST · HORMUZ",
      "Bahrain: Iran struck site as tankers hit",
      "Tehran says the strait could reopen if the US accepts "
      "\u201creasonable\u201d terms.", "ship"),
     (3, (70, 80, 140), "UKRAINE · WAR",
-     "Ukraine strikes the Crimean Bridge again",
-     "Zelenskyy calls the strikes a \u201cfair response\u201d "
-     "to Russia's war.", "bridge"),
+     "Zelenskyy defends Crimean Bridge strikes",
+     "\u201cA fair response\u201d, he says, meeting Britain's "
+     "defence secretary in Kyiv.", "bridge"),
     (4, (146, 96, 24), "MEXICO · CRIME",
      "Cartel boss \u201cEl Chapo Isidro\u201d captured",
      "FBI most-wanted kingpin seized in Sinaloa; the shoot-out "
@@ -61,22 +61,22 @@ CARDS = [
      "Factory fire kills 3, dozens missing",
      "Blaze at a confectionery factory near Jakarta; 36 workers "
      "unaccounted for.", "flame"),
-    (6, (52, 62, 84), "UNITED STATES · CYBER",
-     "FBI probes hack of criminal database",
-     "Apparent breach of the NCIC system; a USDA breach is "
-     "also reported.", "shield"),
+    (6, (52, 62, 84), "UNITED STATES · COURTS",
+     "Man convicted of starting Palisades fire",
+     "Conviction in the case of the blaze that tore through "
+     "Los Angeles' Pacific Palisades.", "court"),
     (7, (38, 92, 128), "UNITED STATES · BORDERS",
      "Arrests at Seattle airport delay flight",
      "Immigration officers make arrests in the terminal; passengers "
      "call the scene distressing.", "plane"),
     (8, (86, 60, 128), "SPACE · SCIENCE",
-     "Two spacecraft reach Mercury",
-     "A pair of orbiters loop in around the little planet \u2014 "
-     "its first visitors in years.", "planet"),
+     "BepiColombo reaches Mercury",
+     "Europe and Japan's two orbiters loop in around the little "
+     "planet \u2014 its first visitors in years.", "planet"),
     (9, (30, 110, 76), "SPORT · FORMULA 1",
      "Verstappen wins wild Las Vegas GP",
-     "34 lead changes and a collision between the Ferraris "
-     "in a classic night race.", "car"),
+     "A slipstream thriller under the lights: the Ferraris collide "
+     "and Russell hits the wall late.", "car"),
     (10, (160, 60, 84), "JAPAN · CULTURE",
      "Shuri Castle's main hall rises again",
      "The Okinawa landmark is restored seven years after fire "
@@ -98,27 +98,27 @@ BRIEFS = [
     (17, "Trump vows 10% cap on credit-card interest rates"),
     (18, "May \u201caghast\u201d at Burnham EU plans: \u201cBrexit is done\u201d"),
     (19, "Zelenskyy: Putin a \u201ckiller\u201d, after Trump \u201cfriend\u201d line"),
-    (20, "Denmark: Russia plotted to kill US-Ukrainian rapper"),
-    (21, "Russia-bound ship droned in Gulf of Finland"),
-    (22, "Man convicted of starting LA's Palisades fire"),
-    (23, "Nigeria youth voter sign-ups fall before election"),
-    (24, "ANC fights to hold key cities after poll setback"),
-    (25, "Jeweller Paolo Bulgari dies at 89"),
-    (26, "Italy ex-police chief takes own life amid mafia probe"),
-    (27, "Croatia outrage over hospital patient's death"),
-    (28, "Bangladesh: nearly 30 Awami League homes torched"),
-    (29, "China warns US over telecom phone-number ban"),
-    (30, "\u201cBlack Saturn\u201d: black hole inside a black hole"),
-    (31, "Princess Aiko returns from Singapore visit"),
-    (32, "Australia faults US budget office on AUKUS"),
-    (33, "England beat All Blacks; Rennie under pressure"),
-    (34, "Leeds win at Chelsea, first time since 1999"),
-    (35, "Wembanyama hits 50 in Spurs win over Pelicans"),
-    (36, "UN talks pledge \u201ckiller robot\u201d rules by 2028"),
-    (37, "Judge OKs $7.25bn Roundup cancer settlement"),
-    (38, "Mamdani plans to close Rikers jail by 2032"),
-    (39, "Spitting Image co-creator Peter Fluck dies, 85"),
-    (40, "Lock of Washington's hair sells for $4,000"),
+    (20, "Russia-bound ship droned in Gulf of Finland"),
+    (21, "Nigeria youth voter sign-ups fall before election"),
+    (22, "ANC fights to hold key cities after poll setback"),
+    (23, "Jeweller Paolo Bulgari dies at 89"),
+    (24, "Italy ex-police chief takes own life amid mafia probe"),
+    (25, "Croatia outrage over hospital patient's death"),
+    (26, "Bangladesh: nearly 30 Awami League homes torched"),
+    (27, "China warns US over telecom phone-number ban"),
+    (28, "\u201cBlack Saturn\u201d: black hole inside a black hole"),
+    (29, "Princess Aiko returns from Singapore visit"),
+    (30, "Australia faults US budget office on AUKUS"),
+    (31, "England beat All Blacks; Rennie under pressure"),
+    (32, "Leeds win at Chelsea, first time since 1999"),
+    (33, "Wembanyama hits 50 in Spurs win over Pelicans"),
+    (34, "UN talks pledge \u201ckiller robot\u201d rules by 2028"),
+    (35, "Mamdani plans to close Rikers jail by 2032"),
+    (36, "Spitting Image co-creator Peter Fluck dies, 85"),
+    (37, "Lock of Washington's hair sells for $4,000"),
+    (38, "Teen gamer and his mother help rescue missing girl"),
+    (39, "Rare Titanic items sell for record sums at auction"),
+    (40, "US declassifies more UFO footage from the Middle East"),
 ]
 
 
@@ -196,6 +196,12 @@ def icon(draw, name, cx, cy, col=(255, 255, 255)):
                       (cx, cy + 11), (cx - 10, cy + 2), (cx - 10, cy - 7)], fill=col)
         draw.line([cx, cy - 8, cx - 2, cy - 1, cx + 1, cy + 2, cx - 1, cy + 8],
                   fill=(52, 62, 84), width=2)
+    elif name == "court":  # courthouse: pediment and pillars
+        draw.polygon([(cx - 14, cy - 7), (cx + 14, cy - 7), (cx, cy - 14)],
+                     fill=col)
+        for px in (-9, 0, 9):
+            draw.rectangle([cx + px - 2, cy - 4, cx + px + 2, cy + 7], fill=col)
+        draw.rectangle([cx - 14, cy + 9, cx + 14, cy + 12], fill=col)
     elif name == "plane":  # airliner
         draw.polygon([(cx - 14, cy + 1), (cx + 12, cy - 3), (cx + 14, cy - 1),
                       (cx + 12, cy + 2), (cx - 12, cy + 4)], fill=col)
@@ -222,6 +228,9 @@ def icon(draw, name, cx, cy, col=(255, 255, 255)):
         draw.polygon([(cx - 10, cy + 3), (cx, cy - 3), (cx + 10, cy + 3),
                       (cx + 7, cy + 3), (cx - 7, cy + 3)], fill=col)
         draw.rectangle([cx - 7, cy + 3, cx + 7, cy + 10], fill=col)
+        draw.line([cx, cy - 10, cx, cy - 16], fill=col, width=2)
+        draw.polygon([(cx, cy - 16), (cx + 7, cy - 14), (cx, cy - 12)],
+                     fill=col)
     elif name == "boat":  # boat on heavy water
         draw.polygon([(cx - 12, cy - 1), (cx + 12, cy - 1), (cx + 7, cy + 6),
                       (cx - 8, cy + 6)], fill=col)
@@ -262,11 +271,11 @@ PINS = {
     1: (24.5, 5.5),    # Antalya, Türkiye
     2: (28.5, 7.0),    # Strait of Hormuz
     3: (25.5, 3.8),    # Crimea
-    4: (5.0, 8.5),     # Sinaloa, Mexico
+    4: (5.4, 9.0),     # Sinaloa, Mexico
     5: (38.5, 12.5),   # Jakarta, Indonesia
-    6: (11.4, 4.9),    # Washington DC
+    6: (3.2, 7.5),     # Los Angeles
     7: (2.7, 3.5),     # Seattle
-    9: (4.0, 6.1),     # Las Vegas
+    9: (4.6, 5.6),     # Las Vegas
     10: (43.5, 6.0),   # Okinawa, Japan
     11: (23.0, 9.8),   # Nigeria
 }
@@ -350,8 +359,8 @@ def draw_briefs(d, y0):
     d.text(((W - d.textlength(t, font=lab)) / 2, y0), t, font=lab, fill=NAVY)
     y = y0 + 30
     col_w = (CW - 2 * 14) / 3
-    nf = font(SANS_B, 11)
-    bf = font(SANS, 11)
+    nf = font(SANS_B, 12)
+    bf = font(SANS, 12)
     per = 10
     for ci in range(3):
         cx = MARGIN + ci * (col_w + 14)
@@ -370,9 +379,9 @@ def draw_briefs(d, y0):
 def draw_footer(d):
     d.line([MARGIN, 986, W - MARGIN, 986], fill=RULE, width=1)
     ff = font(SANS, 10)
-    t = ("Every story was reported on Sunday 22 November 2026; disputed claims are "
-         "attributed. Sources: AP · Reuters · AFP · BBC · Al Jazeera · CNA · "
-         "Japan Times · SCMP. Original drawings.")
+    t = ("The day's news as reported on Sunday 22 November 2026; disputed claims "
+         "are attributed. Sources: AP · Reuters · AFP · BBC · Al Jazeera · CNA · "
+         "Japan Times · SCMP · Economic Times. Original drawings.")
     d.text(((W - d.textlength(t, font=ff)) / 2, 994), t, font=ff, fill=GREY)
 
 
